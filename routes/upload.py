@@ -3,6 +3,7 @@ import os
 import shutil
 import uuid
 import utils
+from werkzeug.utils import secure_filename
 
 bp = Blueprint('upload', __name__, url_prefix='/upload')
 TEMP_DIR = "./temp_uploads"
@@ -21,7 +22,7 @@ def upload():
         if not file:
             return "No file uploaded", 400
 
-        temp_path = os.path.join(TEMP_DIR, file.filename)
+        temp_path = os.path.join(TEMP_DIR, secure_filename(file.filename))
         file.save(temp_path)
 
         final_filename = f"{uuid.uuid4()}{os.path.splitext(file.filename)[1]}"

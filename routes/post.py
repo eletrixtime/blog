@@ -8,6 +8,7 @@ import utils
 bp = Blueprint('post', __name__)
 
 from datetime import datetime
+from werkzeug.utils import secure_filename
 
 
 
@@ -37,6 +38,8 @@ def create_post():
         tags = request.form['tags']
         content = request.form['content']
         filepath = os.path.join(utils.POSTS_DIR, f"{title}.md")
+        #sanitize filename
+        filepath = os.path.join(utils.POSTS_DIR, secure_filename(f"{title}.md"))
 
         post = frontmatter.Post(
             content=content,
