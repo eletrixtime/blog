@@ -1,3 +1,8 @@
+# things
+
+/static/blog_content/*
+/temp_uploads/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
