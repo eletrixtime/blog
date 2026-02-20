@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  eletrixblog:
+    image: python:3.12
+    container_name: eletrixblog
+    working_dir: /app
+    ports:
+      - "127.0.0.1:5006:5000"
+    command: >
+      sh -c "
+        apt-get update &&
+        apt-get install -y git &&
+        git clone https://github.com/eletrixtime/blog.git /app &&
+        pip install --no-cache-dir -r requirements.txt &&
+        gunicorn --bind 0.0.0.0:5000 app:app
+      "
+    restart: always

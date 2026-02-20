@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'base/head.html' %}
+    </head>
+    <body>
+        {% include 'base/navbar.html' %}
+        <div class="content" style="text-align: center;">
+            <h1>eletrixtime - blog</h1>
+            <h2>Recent Posts</h2>
+            <ul style="list-style: none; padding: 0;">
+                {% for post in posts %}
+                    <li>- <a href="/post/{{ post.slug }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+
+    {% include 'base/footer.html' %}
+</html>

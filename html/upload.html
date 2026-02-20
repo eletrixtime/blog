@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'base/head.html' %}
+    </head>
+    <body>
+        {% include 'base/navbar.html' %}
+        <div class="shit">
+            <h1>Upload a file</h1>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        {% include 'base/footer.html' %}
+    </body>
+</html>

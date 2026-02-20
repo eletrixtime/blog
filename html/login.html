@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'base/head.html' %}
+    </head>
+    <body>
+        {% include 'base/navbar.html' %}
+        <div class="shit">
+            <h1>Admin Login</h1>
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        {% include 'base/footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} - EletrixTime</title>
+    <link rel="stylesheet" href="/static/post.css">
+</head>
+<body>
+    <a href="/">← Back to Home</a>
+    <h1>{{ title }}</h1>
+    <div class="meta">
+        POSTED ON {{ date }}
+        <br>
+        //BY <strong>{{ author }}</strong>
+        {% if tags %}
+        <div class="tags">
+            {% for tag in tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <div class="content">
+        {{ content|safe }}
+    </div>
+    <hr style="width: 40em;">
+    <center>
+        <p style="color:red">CONTENT UNDER THE CC BY-NC 4.0 LICENSE.
+            <br>
+            blog.eletrix.fr
+        </p>
+        
+    </center>
+</body>
+</html>

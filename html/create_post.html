@@ -1,0 +1,25 @@
+<!--create post .html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'base/head.html' %}
+    </head>
+    <body>
+        {% include 'base/navbar.html' %}
+        <div class="shit">
+            <h1>Create a post</h1>
+            <form action="/create_post" method="POST">
+                <input type="text" name="title" placeholder="Title">
+                <br>
+                <input type="text" name="author" placeholder="Author">
+                <br>
+                <input type="text" name="tags" placeholder="Tags">
+                <br>
+                <textarea name="content" placeholder="Content"></textarea>
+                <br>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        {% include 'base/footer.html' %}
+    </body>
+</html>

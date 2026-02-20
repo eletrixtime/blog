@@ -1,8 +1,10 @@
-# blog.eletrix.fr
+# [Not In Prod] blog.eletrix.fr
 
 This repo contains the code of my [blog](https://blog.eletrix.fr),
 
 The container pull automatically from the `main` branch (see `docker-compose.yml`).
+
+The code is very bad, Sorry (maybe someday i'll rewrite it?).
 
 ## License :
 

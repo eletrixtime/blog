@@ -1,0 +1,6 @@
+flask
+flask_cors
+gunicorn
+Flask-Caching
+Pillow
+markdown2
