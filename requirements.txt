@@ -4,4 +4,4 @@ gunicorn
 Flask-Caching
 Pillow
 markdown2
-frontmatter
+python-frontmatter
