@@ -48,4 +48,4 @@ from routes import post, upload
 app.register_blueprint(post.bp)
 app.register_blueprint(upload.bp)
 
-app.run(host='0.0.0.0', port=5000, debug=False)
+#app.run(host='0.0.0.0', port=5000, debug=False)
